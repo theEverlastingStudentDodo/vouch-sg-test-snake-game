@@ -218,10 +218,10 @@ The `SnakeGamePage` class encapsulates all game interactions:
 - **Performance**: Stress testing and optimization validation
 
 ## 🔍 Interesting Findings
-- Found bug on collision-detection.spec.ts for test 'should reset button work after collision'. Game over modal is not hidden when user press Reset button
-- On movement-controls.spec.ts for test 'should ignore invalid keys during gameplay' is flaky. Sometimes fail
-- On performance-edge-cases.spec.ts for test 'should handle extremely rapid input without crashes' is flaky due to random movement. Often hitting the wall before timeout makes the test fail since the assertion is checking whether game still on or not.
-- On food-scoring.spec.ts for test 'should increment score when food is consumed' is flaky due to the snake find food using random movement. I don't know how to find food using color contrast or other method yet.
+- Found bug on **collision-detection.spec.ts** for test `should reset button work after collision`. Game over modal is not hidden when user press Reset button
+- On **movement-controls.spec.ts** for test `should ignore invalid keys during gameplay` is flaky. Sometimes fail
+- On **performance-edge-cases.spec.ts** for test `should handle extremely rapid input without crashes` is flaky due to random movement. Often hitting the wall before timeout makes the test fail since the assertion is checking whether game still on or not.
+- On **food-scoring.spec.ts** for test `should increment score when food is consumed` is flaky due to the snake find food using random movement. I don't know how to find food using color contrast or other method yet.
 
 ## Notes
 I have checked the test one by one. Other than tests I mentioned on Interesting Finding, the tests are passed. However, as I run the whole test several times, some of the test will sometimes fail. Due to the time limit, I unable to debug them.
