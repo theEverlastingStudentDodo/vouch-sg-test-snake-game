@@ -350,4 +350,6 @@ class SnakeGame {
 // Initialize game when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     const game = new SnakeGame();
+    // Expose game instance for testing purposes
+    window.game = game;
 });
