@@ -217,7 +217,7 @@ The `SnakeGamePage` class encapsulates all game interactions:
 - **Error Handling**: Comprehensive edge case testing
 - **Performance**: Stress testing and optimization validation
 
-## 🔍 Interesting Findings
+## 🔍 Interesting Findings and Challenges
 - Found bug on **collision-detection.spec.ts** for test `should reset button work after collision`. Game over modal is not hidden when user press Reset button
 - On **movement-controls.spec.ts** for test `should ignore invalid keys during gameplay` is flaky. Sometimes fail
 - On **performance-edge-cases.spec.ts** for test `should handle extremely rapid input without crashes` is flaky due to random movement. Often hitting the wall before timeout makes the test fail since the assertion is checking whether game still on or not.
@@ -226,7 +226,30 @@ The `SnakeGamePage` class encapsulates all game interactions:
 ## Notes
 I have checked the test one by one. Other than tests I mentioned on Interesting Finding, the tests are passed. However, as I run the whole test several times, some of the test will sometimes fail. Due to the time limit, I unable to debug them.
 
-## 📝 Contributing
+## � What Additional Tests I Would Add With More Time
+
+Given more time and resources, I would implement the following additional test scenarios to make the test suite even more comprehensive:
+
+### **Game Logic & Mechanics**
+- **Self-Collision Detection**: Test snake hitting its own body segments
+- **Food Placement Logic**: Verify food never spawns on snake body
+- **Speed Progression**: Validate speed increases at correct score intervals
+- **Game Over State Transitions**: Test all paths that lead to game over
+
+### **Advanced User Interactions**
+- **Mouse/Click Controls**: Test if clicking buttons works during gameplay
+
+### **Visual & Accessibility**
+- **Zoom Level Testing**: Test at 50%, 100%, 200%, 400% zoom levels
+- **Different Screen Sizes**: Test on ultrawide, 4K, and small screens
+- **Slow Network Conditions**: Test with throttled connections
+
+### **Integration & CI/CD**
+- **Pipeline Integration**: Add tests to GitHub Actions/Jenkins
+
+These additional tests would provide even deeper coverage and confidence in the Snake game's quality, reliability, and user experience across all possible scenarios and edge cases.
+
+## �📝 Contributing
 
 To extend this test suite:
 
